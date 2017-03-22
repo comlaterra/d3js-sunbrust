@@ -12,7 +12,24 @@ var getWindowDimensions = function(){
     "y": y
   };
 }
-
+// Resize and recenter on window resize
+window.addEventListener('resize', function(){
+  var windowDimensions = getWindowDimensions();
+  // Dimensions of sunburst.
+  var width = windowDimensions.x,
+      height = windowDimensions.y,
+      // radius = windowDimensions.x > windowDimensions.y ? windowDimensions.y : windowDimensions.x / 2,
+      x = d3.scale.linear().range([0, 2 * Math.PI])
+      y = d3.scale.pow().exponent(1.3).domain([0, 1]).range([0, (windowDimensions.x > windowDimensions.y ? windowDimensions.y : windowDimensions.x)/2]),
+      padding = 5,
+      duration = 1000;
+  // Resize and re-center
+  d3.select("svg")
+    .attr("width", width )
+      .attr("height", height )
+      .select("g")
+      .attr("transform", "translate(" + [width / 2, height / 2] + ")");
+}, false);
 
 var windowDimensions = getWindowDimensions();
 // Dimensions of sunburst.
