@@ -15,15 +15,15 @@ var getWindowDimensions = function(){
 // Resize and recenter on window resize
 window.addEventListener('resize', function(){
   var windowDimensions = getWindowDimensions();
-  // Dimensions of sunburst.
-  var width = windowDimensions.x,
-      height = windowDimensions.y,
-      // radius = windowDimensions.x > windowDimensions.y ? windowDimensions.y : windowDimensions.x / 2,
-      x = d3.scale.linear().range([0, 2 * Math.PI])
-      y = d3.scale.pow().exponent(1.3).domain([0, 1]).range([0, (windowDimensions.x > windowDimensions.y ? windowDimensions.y : windowDimensions.x)/2]),
-      padding = 5,
-      duration = 1000;
-  // Resize and re-center
+  // Updating sunburst dimensions.
+  width = windowDimensions.x,
+  height = windowDimensions.y,
+  x = d3.scale.linear().range([0, 2 * Math.PI])
+  y = d3.scale.pow().exponent(1.3).domain([0, 1]).range([0, (windowDimensions.x > windowDimensions.y ? windowDimensions.y : windowDimensions.x)/2]),
+  padding = 5,
+  duration = 1000;
+
+  // Resize and re-center the svg
   d3.select("svg")
     .attr("width", width )
       .attr("height", height )
@@ -64,8 +64,8 @@ var arc = d3.svg.arc()
     .innerRadius(function(d) { return Math.max(0, d.y ? y(d.y) : d.y); })
     .outerRadius(function(d) { return Math.max(0, 10000); });
 
-	// load the data
-  d3.json("data/cv.json", function(error, json) {
+// load the data
+d3.json("data/cv.json", function(error, json) {
   var nodes = partition.nodes({children: json});
 
   var path = vis.selectAll("path")
@@ -77,9 +77,7 @@ var arc = d3.svg.arc()
       .style("fill", colour)
       .on("click", click)
       .on("mouseover", mouseover);
-   
-    
-    
+
 	// Select all the visible labels
   var text = vis.selectAll("text").data(nodes);
   var textEnter = text.enter().append("text")
@@ -91,7 +89,7 @@ var arc = d3.svg.arc()
         return x(d.x + d.dx / 2) > Math.PI ? "end" : "start";
       })
       .attr("dy", ".2em")
-  
+
   	 // rotate the lable text dependign where it is
       .attr("transform", function(d) {
         var multiline = (d.name || "").split(" ").length > 1,
@@ -110,17 +108,17 @@ var arc = d3.svg.arc()
       .attr("x", 0)
       .attr("dy", "1em")
       .text(function(d) { return d.depth ? d.name.split(" ")[1] || "" : ""; });
-    
+
   // function mouseover(d) {
   //    // Fade all the segments.
   //   d3.selectAll("path")
   //       .style("opacity", 0.3);
   //   }
-	
+
     // Then highlight only those that are an ancestor of the current segment.
    var sequenceArray = getAncestors(d);
-    
-      // Given a node in a partition layout, return an array of all of its ancestor
+
+  // Given a node in a partition layout, return an array of all of its ancestor
   // nodes, highest first, but excluding the root.
   function getAncestors(node) {
     var path = [];
@@ -131,13 +129,13 @@ var arc = d3.svg.arc()
     }
     return path;
   }
-    
+
    vis.selectAll("path")
       .filter(function(node) {
          return (sequenceArray.indexOf(node) >= 0);
               })
       .style("opacity", 1);
-    
+
   function click(d) {
     path.transition()
       .duration(duration)
