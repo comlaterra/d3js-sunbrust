@@ -1,9 +1,26 @@
+var getWindowDimensions = function(){
+  // get the window dimensions
+  var w = window,
+      d = document,
+      e = d.documentElement,
+      g = d.getElementsByTagName('body')[0],
+      x = w.innerWidth || e.clientWidth || g.clientWidth,
+      y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+  return {
+    "x": x,
+    "y": y
+  };
+}
+
+
+var windowDimensions = getWindowDimensions();
 // Dimensions of sunburst.
-var width = 600,
-    height = width,
-    radius = width / 2,
-    x = d3.scale.linear().range([0, 2 * Math.PI]),
-    y = d3.scale.pow().exponent(1.3).domain([0, 1]).range([0, radius]),
+var width = windowDimensions.x,
+    height = windowDimensions.y,
+    // radius = windowDimensions.x > windowDimensions.y ? windowDimensions.y : windowDimensions.x / 2,
+    x = d3.scale.linear().range([0, 2 * Math.PI])
+    y = d3.scale.pow().exponent(1.3).domain([0, 1]).range([0, (windowDimensions.x > windowDimensions.y ? windowDimensions.y : windowDimensions.x)/2]),
     padding = 5,
     duration = 1000;
 
@@ -13,14 +30,10 @@ div.select("img").remove();
 
 // setup html markup for sunburst
 var vis = div.append("svg")
-    .attr("width", width + padding * 2)
-    .attr("height", height + padding * 2)
+    .attr("width", width )
+    .attr("height", height )
     .append("g")
-    .attr("transform", "translate(" + [radius + padding, radius + padding] + ")");
-
-div.append("p")
-    .attr("id", "intro")
-    .text("Click to zoom!");
+    .attr("transform", "translate(" + [width / 2, height / 2] + ")");
 
 // setup the partitions variable
 var partition = d3.layout.partition()
@@ -32,7 +45,7 @@ var arc = d3.svg.arc()
     .startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x))); })
     .endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x + d.dx))); })
     .innerRadius(function(d) { return Math.max(0, d.y ? y(d.y) : d.y); })
-    .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
+    .outerRadius(function(d) { return Math.max(0, 10000); });
 
 	// load the data
   d3.json("data/cv.json", function(error, json) {
@@ -69,12 +82,10 @@ var arc = d3.svg.arc()
             rotate = angle + (multiline ? -.5 : 0);
         return "rotate(" + rotate + ")translate(" + (y(d.y) + padding) + ")rotate(" + (angle > 90 ? -180 : 0) + ")";
       })
-  
+
      // Add the mouse clic handler to the bounding circle.
       .on("click", click)
-    
-   
-      
+
   textEnter.append("tspan")
       .attr("x", 0)
       .text(function(d) { return d.depth ? d.name.split(" ")[0] : ""; });
@@ -168,7 +179,7 @@ function arcTween(d) {
   var my = maxY(d),
       xd = d3.interpolate(x.domain(), [d.x, d.x + d.dx]),
       yd = d3.interpolate(y.domain(), [d.y, my]),
-      yr = d3.interpolate(y.range(), [d.y ? 20 : 0, radius]);
+      yr = d3.interpolate(y.range(), [d.y ? 20 : 0, (width > height ? height : width) / 2]);
   return function(d) {
     return function(t) { x.domain(xd(t)); y.domain(yd(t)).range(yr(t)); return arc(d); };
   };
