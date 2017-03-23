@@ -75,8 +75,8 @@ d3.json("data/cv.json", function(error, json) {
       .attr("d", arc)
       .attr("fill-rule", "evenodd")
       .style("fill", colour)
-      .on("click", click)
-      .on("mouseover", mouseover);
+      .on("click", click);
+      // .on("mouseover", mouseover);
 
 	// Select all the visible labels
   var text = vis.selectAll("text").data(nodes);
@@ -109,6 +109,13 @@ d3.json("data/cv.json", function(error, json) {
       .attr("dy", "1em")
       .text(function(d) { return d.depth ? d.name.split(" ")[1] || "" : ""; });
 
+  textEnter.append("tspan")
+      .attr("x", 0)
+      .attr("dy", "1em")
+      .attr("class", "description")
+      // .style("visibility")
+      .text(function(d) { return d.depth ? d.description || "" : ""; });
+
   // function mouseover(d) {
   //    // Fade all the segments.
   //   d3.selectAll("path")
@@ -116,7 +123,7 @@ d3.json("data/cv.json", function(error, json) {
   //   }
 
     // Then highlight only those that are an ancestor of the current segment.
-   var sequenceArray = getAncestors(d);
+   // var sequenceArray = getAncestors(d);
 
   // Given a node in a partition layout, return an array of all of its ancestor
   // nodes, highest first, but excluding the root.
@@ -130,19 +137,22 @@ d3.json("data/cv.json", function(error, json) {
     return path;
   }
 
-   vis.selectAll("path")
-      .filter(function(node) {
-         return (sequenceArray.indexOf(node) >= 0);
-              })
-      .style("opacity", 1);
+   // vis.selectAll("path")
+   //    .filter(function(node) {
+   //       return (sequenceArray.indexOf(node) >= 0);
+   //            })
+   //    .style("opacity", 1);
 
   function click(d) {
     path.transition()
       .duration(duration)
       .attrTween("d", arcTween(d));
 
+    // d.text.style("visibility")
+
     // Somewhat of a hack as we rely on arcTween updating the scales.
     text.style("visibility", function(e) {
+          // hidding the tets that his parent is not the selected one
           return isParentOf(d, e) ? null : d3.select(this).style("visibility");
         })
       .transition()
@@ -253,7 +263,7 @@ function mouseleave(d) {
       .style("visibility", "hidden");
 
   // Deactivate all segments during transition.
-  d3.selectAll("path").on("mouseover", null);
+  // d3.selectAll("path").on("mouseover", null);
 
   // Transition each segment to full opacity and then reactivate it.
   d3.selectAll("path")
@@ -261,7 +271,7 @@ function mouseleave(d) {
       .duration(1000)
       .style("opacity", 1)
       .each("end", function() {
-              d3.select(this).on("mouseover", mouseover);
+              // d3.select(this).on("mouseover", mouseover);
             });
 
   d3.select("#explanation")
