@@ -113,14 +113,7 @@ d3.json("data/cv.json", function(error, json) {
       .attr("x", 0)
       .attr("dy", "1em")
       .attr("class", "description")
-      // .style("visibility")
       .text(function(d) { return d.depth ? d.description || "" : ""; });
-
-  // function mouseover(d) {
-  //    // Fade all the segments.
-  //   d3.selectAll("path")
-  //       .style("opacity", 0.3);
-  //   }
 
     // Then highlight only those that are an ancestor of the current segment.
    // var sequenceArray = getAncestors(d);
@@ -137,18 +130,18 @@ d3.json("data/cv.json", function(error, json) {
     return path;
   }
 
-   // vis.selectAll("path")
-   //    .filter(function(node) {
-   //       return (sequenceArray.indexOf(node) >= 0);
-   //            })
-   //    .style("opacity", 1);
-
   function click(d) {
+
+    if(d.selected && d.parent){
+      d.selected = false;
+      d = d.parent;
+    }
+
+    if(!d.selected)d.selected = true;
+
     path.transition()
       .duration(duration)
       .attrTween("d", arcTween(d));
-
-    // d.text.style("visibility")
 
     // Somewhat of a hack as we rely on arcTween updating the scales.
     text.style("visibility", function(e) {
@@ -172,7 +165,7 @@ d3.json("data/cv.json", function(error, json) {
         })
         .style("fill-opacity", function(e) { return isParentOf(d, e) ? 1 : 1e-6; })
         .each("end", function(e) {
-          d3.select(this).style("visibility", isParentOf(d, e) ? null : "hidden");
+            d3.select(this).style("visibility", isParentOf(d, e) ? null : "hidden");
         });
   }
 });
@@ -204,9 +197,14 @@ function arcTween(d) {
   var my = maxY(d),
       xd = d3.interpolate(x.domain(), [d.x, d.x + d.dx]),
       yd = d3.interpolate(y.domain(), [d.y, my]),
-      yr = d3.interpolate(y.range(), [d.y ? 20 : 0, (width > height ? height : width) / 2]);
+      yr = d3.interpolate(y.range(), [d.y ? d.selected ? 0 : 20 : 0, (width > height ? height : width) / 2]);
+
   return function(d) {
-    return function(t) { x.domain(xd(t)); y.domain(yd(t)).range(yr(t)); return arc(d); };
+    return function(t) {
+      x.domain(xd(t));
+      y.domain(yd(t)).range( yr(t) );
+      return arc(d);
+    };
   };
 }
 
