@@ -113,6 +113,7 @@ d3.json("data/cv.json", function(error, json) {
       .attr("x", 0)
       .attr("dy", "1em")
       .attr("class", "description")
+      .attr("visibility", "hidden")
       .text(function(d) { return d.depth ? d.description || "" : ""; });
 
     // Then highlight only those that are an ancestor of the current segment.
@@ -137,7 +138,7 @@ d3.json("data/cv.json", function(error, json) {
       d = d.parent;
     }
 
-    if(!d.selected)d.selected = true;
+    if(!d.selected) d.selected = true;
 
     path.transition()
       .duration(duration)
@@ -146,7 +147,7 @@ d3.json("data/cv.json", function(error, json) {
     // Somewhat of a hack as we rely on arcTween updating the scales.
     text.style("visibility", function(e) {
           // hidding the tets that his parent is not the selected one
-          return isParentOf(d, e) ? null : d3.select(this).style("visibility");
+          return (isParentOf(d, e) || !e.selected) ? null : d3.select(this).style("visibility");
         })
       .transition()
         .duration(duration)
@@ -160,12 +161,13 @@ d3.json("data/cv.json", function(error, json) {
           return function() {
             var angle = x(d.x + d.dx / 2) * 180 / Math.PI - 90,
                 rotate = angle + (multiline ? -.5 : 0);
+
             return "rotate(" + rotate + ")translate(" + (y(d.y) + padding) + ")rotate(" + (angle > 90 ? -180 : 0) + ")";
           };
         })
-        .style("fill-opacity", function(e) { return isParentOf(d, e) ? 1 : 1e-6; })
+        .style("fill-opacity", function(e) { return (isParentOf(d, e) && !e.selected) ? 1 : 1e-6; })
         .each("end", function(e) {
-            d3.select(this).style("visibility", isParentOf(d, e) ? null : "hidden");
+            d3.select(this).style("visibility", (isParentOf(d, e) && !e.selected) ? null : "hidden");
         });
   }
 });
