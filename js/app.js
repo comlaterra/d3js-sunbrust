@@ -104,6 +104,7 @@ d3.json("data/cv.json", function(error, json) {
   textEnter.append("tspan")
       .attr("x", 0)
       .text(function(d) { return d.depth ? d.name.split(" ")[0] : ""; });
+
   textEnter.append("tspan")
       .attr("x", 0)
       .attr("dy", "1em")
@@ -142,11 +143,26 @@ d3.json("data/cv.json", function(error, json) {
 
     path.transition()
       .duration(duration)
-      .attrTween("d", arcTween(d));
+      .attrTween("d", arcTween(d))
+      .each("end", function(e) {
+            if(e.selected){
+                // As soon the selected finished, we know the depth so we can "guess" the diameter
+                if(e.depth !== 0 && e.depth !== 1){
+                    var wDimentions = getWindowDimensions();
+                    var diameter = (windowDimensions.x > windowDimensions.y ? windowDimensions.y : windowDimensions.x) * 0.11 * e.depth;
+                }else if(e.depth !== 1){
+                    var diameter = 200;
+                }
+                d3.select(".description-wrapper").style("width", diameter);
+                d3.select(".description-wrapper").style("height", diameter);
+                d3.select(".description-wrapper").style("margin-left", diameter/-2);
+                d3.select(".description-wrapper").style("margin-top", diameter/-2);
+            }
+        });
 
     // Somewhat of a hack as we rely on arcTween updating the scales.
     text.style("visibility", function(e) {
-          // hidding the tets that his parent is not the selected one
+          // hidding the texts that his parent is not the selected one
           return (isParentOf(d, e) || !e.selected) ? null : d3.select(this).style("visibility");
         })
       .transition()
@@ -205,6 +221,7 @@ function arcTween(d) {
     return function(t) {
       x.domain(xd(t));
       y.domain(yd(t)).range( yr(t) );
+
       return arc(d);
     };
   };
