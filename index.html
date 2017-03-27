@@ -1,14 +1,13 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="css/style.css" data-main-css="1">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	</head>
 	<body>
 		<!-- sunburt graph below -->
 		<style>
 			.description-wrapper{
-			    position: absolute;
-			    top: 0;
-			    background: red;
+			    background: transparent;
 				position: absolute;
 			    left: 50%;
 			    top: 50%;
@@ -18,10 +17,56 @@
 			    margin-left: -100px;
 			    margin-top: -100px;
 			    border-radius: 50%;
+			    overflow: hidden;
+    			transition: all .5s;
+    			font-size: 1.7vw;
+			}
+			.description-wrapper div.content{
+				text-align: center;
+			    /*margin: 15% auto;*/
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    left: 0;
+			    right: 0;
+			}
+			.description-wrapper div.content h1{
+				margin-top: 25%;
+			}
+			.description-wrapper div.content p{
+				margin: .5vw 0;
+				line-height: 3vw;
+			}
+
+			.description-wrapper span.image{
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				position: absolute;
+				background-position: 50% 0;
+				background-size: cover;
+			}
+			.js-image{
+				background-image: url("data/assets/js.jpg");
+			}
+
+			.me-image{
+				background-image: url("data/assets/me.jpg");
+			}
+
+			.less-image{
+				background-image: url("data/assets/less.png");
+			}
+			.cordova-image{
+				background-image: url("data/assets/cordova.png");
+			}
+			.grunt-image{
+				background-image: url("data/assets/grunt.png");
 			}
 		</style>
 		<div id="sunburst"><img src=""></div>
-		<div id-"description-wrapper" class="description-wrapper"></div>
+		<div id="description-wrapper" class="description-wrapper"></div>
 		<script src="js/d3.min.js"></script>
 		<script src="js/app.js"></script>
 	</body>
