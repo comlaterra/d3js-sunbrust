@@ -230,9 +230,8 @@ function colour(d) {
       l += c.l;
     }
     return d3.lab(l/colours.length, a/colours.length, b/colours.length);
-
   }
-  return d.colour || "#fff";
+  return d.colour || "#ffffff";
 }
 
 // Interpolate the scales!
