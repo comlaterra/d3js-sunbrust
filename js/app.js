@@ -218,12 +218,19 @@ function isParentOf(p, c) {
 
 function colour(d) {
   if (d.children) {
-    // There is a maximum of two children!
-    var colours = d.children.map(colour),
-        a = d3.hsl(colours[0]),
-        b = d3.hsl(colours[1]);
-    // L*a*b* might be better here...
-    return d3.hsl((a.h + b.h) / 2, a.s * 1.2, a.l / 1.2);
+    var colours = d.children.map(colour);
+    var l = 0;
+    var a = 0;
+    var b = 0;
+    var c;
+    for (var i = 0; i < colours.length; i++) {
+      c = d3.lab(colours[i])
+      a += c.a;
+      b += c.b;
+      l += c.l;
+    }
+    return d3.lab(l/colours.length, a/colours.length, b/colours.length);
+
   }
   return d.colour || "#fff";
 }
