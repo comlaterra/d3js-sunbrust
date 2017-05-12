@@ -68,6 +68,7 @@ var arc = d3.svg.arc()
 
 // load the data
 d3.json("data/cv.json", function(error, json) {
+
   var nodes = partition.nodes({children: json});
 
   var path = vis.selectAll("path")
@@ -119,8 +120,8 @@ d3.json("data/cv.json", function(error, json) {
       .attr("visibility", "hidden")
       .text(function(d) { return d.depth ? d.description || "" : ""; });
 
-    // Then highlight only those that are an ancestor of the current segment.
-   // var sequenceArray = getAncestors(d);
+  // Then highlight only those that are an ancestor of the current segment.
+  // var sequenceArray = getAncestors(d);
 
   // Given a node in a partition layout, return an array of all of its ancestor
   // nodes, highest first, but excluding the root.
@@ -135,7 +136,6 @@ d3.json("data/cv.json", function(error, json) {
   }
   var previousSelected = null;
   function click(d) {
-
     if(d.selected && d.parent){
       d.selected = false;
       d = d.parent;
@@ -182,28 +182,29 @@ d3.json("data/cv.json", function(error, json) {
     text.style("visibility", function(e) {
           // hidding the texts that his parent is not the selected one
           return (isParentOf(d, e) || !e.selected) ? null : d3.select(this).style("visibility");
-        })
+      })
       .transition()
-        .duration(duration)
-        .attrTween("text-anchor", function(d) {
+      .duration(duration)
+      .attrTween("text-anchor", function(d) {
           return function() {
-            return x(d.x + d.dx / 2) > Math.PI ? "end" : "start";
+              return x(d.x + d.dx / 2) > Math.PI ? "end" : "start";
           };
-        })
-        .attrTween("transform", function(d) {
+      })
+      .attrTween("transform", function(d) {
           var multiline = (d.name || "").split(" ").length > 1;
           return function() {
-            var angle = x(d.x + d.dx / 2) * 180 / Math.PI - 90,
-                rotate = angle + (multiline ? -.5 : 0);
+              var angle = x(d.x + d.dx / 2) * 180 / Math.PI - 90,
+                  rotate = angle + (multiline ? -.5 : 0);
 
-            return "rotate(" + rotate + ")translate(" + (y(d.y) + padding) + ")rotate(" + (angle > 90 ? -180 : 0) + ")";
+              return "rotate(" + rotate + ")translate(" + (y(d.y) + padding) + ")rotate(" + (angle > 90 ? -180 : 0) + ")";
           };
-        })
-        .style("fill-opacity", function(e) { return (isParentOf(d, e) && !e.selected) ? 1 : 1e-6; })
-        .each("end", function(e) {
-            d3.select(this).style("visibility", (isParentOf(d, e) && !e.selected) ? null : "hidden");
-        });
+      })
+      .style("fill-opacity", function(e) { return (isParentOf(d, e) && !e.selected) ? 1 : 1e-6; })
+      .each("end", function(e) {
+          d3.select(this).style("visibility", (isParentOf(d, e) && !e.selected) ? null : "hidden");
+      });
   }
+  click(json[0]);
 });
 
 function isParentOf(p, c) {
