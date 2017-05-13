@@ -156,9 +156,7 @@ d3.json("data/cv.json", function(error, json) {
         .each("end", function(e) {
             if(e.selected){
                 // As soon the selected finished, we know the depth so we can "guess" the diameter
-                console.log(e)
-                
-                // var diameter = 200;
+                var diameter;
                 if(e.depth !== 0){
                     var wDimentions = getWindowDimensions();
                     diameter = (windowDimensions.x > windowDimensions.y ? windowDimensions.y : windowDimensions.x) * 0.14 * e.depth;
@@ -168,7 +166,6 @@ d3.json("data/cv.json", function(error, json) {
                 }else{
                     diameter = 200;
                 }
-
 
                 window.setTimeout(function(){
                   d3.select(".description-wrapper").style("width", diameter)
@@ -226,6 +223,7 @@ function isParentOf(p, c) {
 }
 
 function colour(d) {
+  // The parents will always have the avg color from all children
   if (d.children) {
     var colours = d.children.map(colour);
     var l = 0;
