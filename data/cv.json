@@ -1,0 +1,399 @@
+[{
+ "name": "",
+ "description": "<span class='me-image image'></span>",
+ "children": [
+  {
+   "name": "Work",
+   "description": "<div class='description-content-wrapper'><h1>WORK</h1><p>Curiosity trigger<br>Motivational<br>Passional</p></div>",
+   "children": [
+    {
+     "name": "C42",
+     "description": "<h1>C42</h1><p>Current focus<br>Mobility<br>Change the World</p>",
+     "children": [
+      {
+        "name": "Tech",
+        "children": [
+          {
+            "name": "JS",
+            "colour": "#ffffff",
+            "description": "<span class='js-image image'></span>"
+          },
+          {
+            "name": "MV*",
+            "colour": "#fafcfe"
+          },
+          {
+            "name": "SASS",
+            "colour": "#eaf2fa",
+            "description": "<span class='less-image image'></span>"
+          },
+          {
+            "name": "Cordova",
+            "colour": "#d9e8f6",
+            "description": "<span class='cordova-image image'></span>"
+          },
+          {
+            "name": "Grunt",
+            "colour": "#c8def3",
+            "description": "<span class='grunt-image image'></span>"
+          },
+          {
+            "name": "Python",
+            "colour": "#b7d4ef",
+            "description": "<span class='python-image image'></span>"
+          },
+          {
+            "name": "D3JS",
+            "colour": "#a7caeb",
+            "description": "<span class='python-image image'></span>"
+          }
+         ]
+      },
+      {
+        "name": "Tasks",
+        "children": [
+          {
+            "name": "Developer",
+            "colour" : "#96c1e8",
+            "description": "<h1>DEV</h1><p>Love Code<br>Prototyping<br>+ Solutions<br>- Problems</p>"
+          },
+          {
+            "name": "Biz",
+            "colour" : "#74ade0",
+            "description": "<h1>BIZ</h1><p>Product Owner<br>Economy</p>"
+          },
+          {
+            "name": "Strategy",
+            "colour" : "#64a3dd",
+            "description": "<h1>STRATEGY</h1><p>Future<br>Prototyping</p>"
+          }
+         ]
+      },
+      {
+        "name": "Projects",
+        "children": [
+          {
+            "name": "Fuwa",
+            "colour" : "#5399d9",
+            "description": "<h1>FRONT END</h1><p>Open, multi modal & real time trip planning toolbox<br>With the single goal to enable you to build the best travel information apps & services out there</p>"
+          },
+          {
+            "name": "PlannerStack",
+            "colour" : "#428fd5",
+            "description": "<h1>FRONT END</h1><p>Open, multi modal & real time trip planning toolbox<br>With the single goal to enable you to build the best travel information apps & services out there</p>"
+          },
+          {
+            "name": "Toogethr",
+            "colour" : "#2c80cd",
+            "description": "<img src='data/assets/toogethr.svg' class='image' style=' width: 100%;height: 100%;' alt='Toogethr Logo'>"
+          },
+          {
+            "name": "Calendar42",
+            "colour" : "#2770b4",
+            "description": "<span class='calendar42-image image'></span>"
+          },
+          {
+            "name": "C42.io",
+            "colour" : "#2366a3",
+            "description": "<span class='calendar42-image image'></span>"
+          }
+         ]
+      }
+     ]
+    },
+    {
+     "name": "Innofis",
+     "description": "<h1>INNOFIS</h1><p>Banking<br>Hybrid</p>",
+     "children": [
+      {
+        "name": "Tech",
+        "children": [
+          {
+            "name": "JS",
+            "colour": "#30649c",
+            "description": "<span class='js-image image'></span>"
+          },{
+            "name": "Bootstrap",
+            "colour": "#3c6395",
+            "description": "<img src='data/assets/bootstrap.svg' class='image' style=' width: 100%;height: 100%;' alt='Toogethr Logo'>"
+          },
+          {
+            "name": "LESS",
+            
+            "colour": "#566087",
+            "description": "<span class='less-image image'></span>"
+          },
+          {
+            "name": "Cordova",
+            "colour": "#625e80",
+            "description": "<span class='cordova-image image'></span>"
+          },
+          {
+            "name": "Grunt",
+            "colour": "#6f5d7a",
+            "description": "<span class='grunt-image image'></span>"
+          },
+          {
+            "name": "Java",
+            "colour": "#7c5b73",
+            "description": "<span class='java-image image'></span>"
+          }
+         ]
+      },
+      {
+        "name": "Tasks",
+        "children": [
+          {
+            "name": "Senior",
+            "colour": "#88596c",
+            "description": "<h1>SENIOR</h1><p>Tech Stack<br>Responsability<br>Guidance</p>"
+          },
+          {
+            "name": "Architect",
+            "description": "<h1>ARCHITECT</h1><p>Design<br>Software engineering</p>",
+            "colour": "#955865"
+          }
+         ]
+      },
+      {
+        "name": "Success",
+        "children": [
+          {
+            "name": "SAIB",
+            "colour": "#a2565e"
+          },
+          {
+            "name": "Aljazira",
+            "colour": "#ae5557"
+          }
+         ]
+      }
+     ]
+    },
+    {
+     "name": "Freelance",
+     "children": [
+      {
+        "name": "Tech",
+        "children": [
+          {
+            "name": "JS",
+            "colour": "#bb5350",
+            "description": "<span class='js-image image'></span>"
+          },
+          {
+            "name": "PHP",
+            "colour": "#c15d4d"
+          },
+          {
+            "name": "Wordpress",
+            "colour": "#c6674b"
+          },
+          {
+            "name": "eCommerce",
+            "colour": "#cc7148"
+          },
+          {
+            "name": "Yii",
+            "colour": "#d27b46"
+          },
+          {
+            "name": "ExtJS",
+            "colour": "#d78543"
+          }
+         ]
+      },
+      {
+        "name": "Tasks",
+        "children": [
+          {
+            "name": "Solve",
+            "colour": "#dd8e41"
+          },
+          {
+            "name": "Consultancy",
+            "colour": "#e3983e"
+          },
+          {
+            "name": "Develop",
+            "colour": "#e8a23b"
+          },
+          {
+            "name": "Lead",
+            "colour": "#eeac39"
+          }
+         ]
+      },
+      {
+        "name": "Success",
+        "children": [
+          {
+            "name": "Prorest",
+            "colour": "#f4b636"
+          },
+          {
+            "name": "Smartbrand",
+            "colour": "#f9c034"
+          },
+          {
+            "name": "OhayoWeb",
+            "colour": "#ffca31"
+          },
+          {
+            "name": "Institucio",
+            "colour": "#ffcc3a"
+          }
+         ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Projects",
+   "children": [{
+     "name": "Campde lasort",
+     "children": [
+      {
+        "name": "Tech",
+        "children": [
+          {
+            "name": "jQuery",
+            "colour": "#fecd43"
+          },
+          {
+            "name": "PHP",
+            "colour": "#fecf4c"
+          },
+          {
+            "name": "eCommerce",
+            "colour": "#fdd155"
+          },
+          {
+            "name": "JS",
+            "colour": "#fdd25e",
+            "description": "<span class='js-image image'></span>"
+          }
+        ]
+      },
+      {
+        "name": "Keywords",
+        "children": [
+          {
+            "name": "Automation",
+            "colour": "#fdd467"
+          },
+          {
+            "name": "Logistics",
+            "colour": "#fcd66f"
+          },
+          {
+            "name": "Development",
+            "colour": "#fcd778"
+          },
+          {
+            "name": "Mobile",
+            "colour": "#fbd981"
+          }
+        ]
+      }
+      ]
+    },
+    {
+     "name": "eMarine Apps",
+     "children": [
+      {
+        "name": "Tech",
+        "children": [
+          {
+            "name": "Ionic",
+            "colour": "#fbdb8a"
+          },
+          {
+            "name": "AdMob",
+            "colour": "#fadc93"
+          },
+          {
+            "name": "NodeJS",
+            "colour": "#fade9c"
+          },
+          {
+            "name": "RSS",
+            "colour": "#FADE9C"
+          },
+          {
+            "name": "Gulp",
+            "colour": "#fae1a4"
+          }
+        ]
+      },
+      {
+        "name": "Keywords",
+        "children": [
+          {
+            "name": "Automation",
+            "colour": "#fbe4ad"
+          },
+          {
+            "name": "Monetization",
+            "colour": "#fbe6b5"
+          },
+          {
+            "name": "ASO",
+            "colour": "#fce9bd"
+          },
+          {
+            "name": "Mobile",
+            "colour": "#fcecc5"
+          }
+        ]
+      }
+      ]
+    },
+    {
+     "name": "Willy's Way",
+     "children": [
+      {
+        "name": "Tech",
+        "children": [
+          {
+            "name": "Ionic",
+            "colour": "#fdeece"
+          },
+          {
+            "name": "AdMob",
+            "colour": "#fdf1d6"
+          },
+          {
+            "name": "Javascript",
+            "colour": "#fdf4de"
+          }
+        ]
+      },
+      {
+        "name": "Keywords",
+        "children": [
+          {
+            "name": "Experience",
+            "colour": "#fef7e6"
+          },
+          {
+            "name": "Refferral",
+            "colour": "#fefaee"
+          },
+          {
+            "name": "Smart",
+            "colour": "#fffcf7"
+          },
+          {
+            "name": "Conversation",
+            "colour": "#ffffff"
+          }
+        ]
+      }
+      ]
+    }
+   ]
+  }
+ ]
+}]
