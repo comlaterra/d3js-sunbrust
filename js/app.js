@@ -156,12 +156,19 @@ d3.json("data/cv.json", function(error, json) {
         .each("end", function(e) {
             if(e.selected){
                 // As soon the selected finished, we know the depth so we can "guess" the diameter
+                console.log(e)
+                
+                // var diameter = 200;
                 if(e.depth !== 0){
                     var wDimentions = getWindowDimensions();
-                    var diameter = (windowDimensions.x > windowDimensions.y ? windowDimensions.y : windowDimensions.x) * 0.14 * e.depth;
-                }else if(e.depth !== 1){
-                    var diameter = 200;
+                    diameter = (windowDimensions.x > windowDimensions.y ? windowDimensions.y : windowDimensions.x) * 0.14 * e.depth;
+                    if(e.depth !== 1){
+                      diameter = diameter - (diameter * 25 / 100);
+                    }
+                }else{
+                    diameter = 200;
                 }
+
 
                 window.setTimeout(function(){
                   d3.select(".description-wrapper").style("width", diameter)
@@ -173,7 +180,8 @@ d3.json("data/cv.json", function(error, json) {
                       .append("div")
                       .attr("class", "content")
                       .html(e.description);
-                },250)
+                },250);
+
             }
         }
     );

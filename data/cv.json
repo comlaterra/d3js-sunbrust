@@ -4,11 +4,11 @@
  "children": [
   {
    "name": "Work",
-   "description": "<div class='description-content-wrapper'><h1>WORK</h1><p>Curiosity trigger<br>Motivational<br>Passional</p></div>",
+   "description": "<span class='working-learning-image image'></span>",
    "children": [
     {
      "name": "C42",
-     "description": "<h1>C42</h1><p>Current focus<br>Mobility<br>Change the World</p>",
+     "description": "<span class='calendar42-image image'></span>",
      "children": [
       {
         "name": "Tech",
@@ -20,12 +20,13 @@
           },
           {
             "name": "MV*",
-            "colour": "#fafcfe"
+            "colour": "#fafcfe",
+            "description": "<span class='angular-image image'></span>"
           },
           {
             "name": "SASS",
             "colour": "#eaf2fa",
-            "description": "<span class='less-image image'></span>"
+            "description": "<span class='sass-image image'></span>"
           },
           {
             "name": "Cordova",
@@ -103,7 +104,7 @@
     },
     {
      "name": "Innofis",
-     "description": "<h1>INNOFIS</h1><p>Banking<br>Hybrid</p>",
+     "description": "<span class='innofis-image image'></span>",
      "children": [
       {
         "name": "Tech",
@@ -160,11 +161,13 @@
         "children": [
           {
             "name": "SAIB",
-            "colour": "#a2565e"
+            "colour": "#a2565e",
+            "description": "<span class='saib-logo image'></span>"
           },
           {
             "name": "Aljazira",
-            "colour": "#ae5557"
+            "colour": "#ae5557",
+            "description": "<span class='bank-al-jazira-logo image'></span>"
           }
          ]
       }
@@ -172,6 +175,7 @@
     },
     {
      "name": "Freelance",
+     "description": "<span class='freelance-image image'></span>",
      "children": [
       {
         "name": "Tech",
@@ -187,7 +191,8 @@
           },
           {
             "name": "Wordpress",
-            "colour": "#c6674b"
+            "colour": "#c6674b",
+            "description": "<span class='wp-logo image'></span>"
           },
           {
             "name": "eCommerce",
@@ -195,11 +200,13 @@
           },
           {
             "name": "Yii",
-            "colour": "#d27b46"
+            "colour": "#d27b46",
+            "description": "<span class='yii-image image'></span>"
           },
           {
             "name": "ExtJS",
-            "colour": "#d78543"
+            "colour": "#d78543",
+            "description": "<span class='extjs-image image'></span>"
           }
          ]
       },
@@ -208,7 +215,8 @@
         "children": [
           {
             "name": "Solve",
-            "colour": "#dd8e41"
+            "colour": "#dd8e41",
+            "description": "<span class='solve-image image'></span>"
           },
           {
             "name": "Consultancy",
@@ -307,11 +315,13 @@
         "children": [
           {
             "name": "Ionic",
-            "colour": "#fbdb8a"
+            "colour": "#fbdb8a",
+            "description": "<span class='ionic-logo image'></span>"
           },
           {
             "name": "AdMob",
-            "colour": "#fadc93"
+            "colour": "#fadc93",
+            "description": "<span class='admob-logo image'></span>"
           },
           {
             "name": "NodeJS",
@@ -323,7 +333,8 @@
           },
           {
             "name": "Gulp",
-            "colour": "#fae1a4"
+            "colour": "#fae1a4",
+            "description": "<span class='gulp-image image'></span>"
           }
         ]
       },
@@ -358,11 +369,13 @@
         "children": [
           {
             "name": "Ionic",
-            "colour": "#fdeece"
+            "colour": "#fdeece",
+            "description": "<span class='ionic-logo image'></span>"
           },
           {
             "name": "AdMob",
-            "colour": "#fdf1d6"
+            "colour": "#fdf1d6",
+            "description": "<span class='admob-logo image'></span>"
           },
           {
             "name": "Javascript",
