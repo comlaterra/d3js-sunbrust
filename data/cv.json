@@ -72,6 +72,7 @@
       },
       {
         "name": "Projects",
+        "description": "<span class='projects-image image'></span>",
         "children": [
           {
             "name": "Fuwa",
@@ -259,6 +260,7 @@
   },
   {
    "name": "Projects",
+    "description": "<span class='projects-image image'></span>",
    "children": [{
      "name": "Campde lasort",
      "children": [
