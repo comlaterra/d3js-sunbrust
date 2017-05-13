@@ -70,3 +70,12 @@
 .java-image{
 	background-image: url("../data/assets/java.png");
 }
+.rss-logo{
+	background-image: url("../data/assets/rss.png");
+}
+.nodejs-logo{
+	background-image: url("../data/assets/nodejs.png");
+}
+.code-logo{
+	background-image: url("../data/assets/code.png");
+}

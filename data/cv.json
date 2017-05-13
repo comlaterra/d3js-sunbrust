@@ -56,7 +56,7 @@
           {
             "name": "Developer",
             "colour" : "#96c1e8",
-            "description": "<h1>DEV</h1><p>Love Code<br>Prototyping<br>+ Solutions<br>- Problems</p>"
+            "description": "<span class='code-logo image'></span>"
           },
           {
             "name": "Biz",
@@ -146,9 +146,9 @@
         "name": "Tasks",
         "children": [
           {
-            "name": "Senior",
+            "name": "Develop",
             "colour": "#88596c",
-            "description": "<h1>SENIOR</h1><p>Tech Stack<br>Responsability<br>Guidance</p>"
+            "description": "<span class='code-logo image'></span>"
           },
           {
             "name": "Architect",
@@ -225,7 +225,8 @@
           },
           {
             "name": "Develop",
-            "colour": "#e8a23b"
+            "colour": "#e8a23b",
+            "description": "<span class='code-logo image'></span>"
           },
           {
             "name": "Lead",
@@ -299,7 +300,8 @@
           },
           {
             "name": "Development",
-            "colour": "#fcd778"
+            "colour": "#fcd778",
+            "description": "<span class='code-logo image'></span>"
           },
           {
             "name": "Mobile",
@@ -327,11 +329,13 @@
           },
           {
             "name": "NodeJS",
-            "colour": "#fade9c"
+            "colour": "#fade9c",
+            "description": "<span class='nodejs-logo image'></span>"
           },
           {
             "name": "RSS",
-            "colour": "#FADE9C"
+            "colour": "#FADE9C",
+            "description": "<span class='rss-logo image'></span>"
           },
           {
             "name": "Gulp",
