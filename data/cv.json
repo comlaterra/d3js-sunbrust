@@ -117,7 +117,7 @@
           },{
             "name": "Bootstrap",
             "colour": "#3c6395",
-            "description": "<img src='data/assets/bootstrap.svg' class='image' style=' width: 100%;height: 100%;' alt='Toogethr Logo'>"
+            "description": "<img src='data/assets/bootstrap.svg' class='image' style=' width: 100%;height: 100%;' alt='Bootstrap Logo'>"
           },
           {
             "name": "LESS",
