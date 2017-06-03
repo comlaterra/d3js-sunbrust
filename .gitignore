@@ -1,5 +1,4 @@
 *.json
 !cv.json
-data/assets
 
 .htaccess
