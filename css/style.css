@@ -55,33 +55,49 @@ a.github img{
     height: 200px;
     margin-left: -100px;
     margin-top: -100px;
-    border-radius: 50%;
     overflow: hidden;
     transition: all .5s;
     /*font-size: 1vw;*/
 }
+
 .description-wrapper div.content{
     text-align: center;
-    /*margin: 15% auto;*/
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
 }
+
+/*
+    TITLE
+ */
 .description-wrapper div.content h1{
     margin-top: 25%;
-    /*font-size: 4em;*/
     margin-bottom: auto;
 }
-.description-wrapper div.content p{
-    margin: 0 auto;
-    /*line-height: 2vw;*/
-    width: 75%;
-    text-align: center;
-    /*font-size: 1.5em;*/
+.description-wrapper div.content h1.top{
+    margin-top: 0%;
 }
 
+/**
+    BODY
+ */
+.description-wrapper div.content p{
+    margin: 0 auto;
+    width: 75%;
+    text-align: center;
+}
+/*
+    LISTS
+ */
+.description-wrapper div.content ul{
+    text-align: left;
+}
+
+/**
+    IMAGE
+ */
 .description-wrapper span.image{
     top: 0;
     bottom: 0;
@@ -90,4 +106,5 @@ a.github img{
     position: absolute;
     background-position: 50% 0;
     background-size: cover;
+    border-radius: 50%;
 }

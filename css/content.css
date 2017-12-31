@@ -82,3 +82,36 @@
 .d3js-logo{
 	background-image: url("../data/assets/d3js.png");
 }
+.tech-image{
+	background-image: url("../data/assets/gear.png");
+}
+.check-image{
+	background-image: url("../data/assets/check.png");
+}
+.strategy-image{
+	background-image: url("../data/assets/StrategyIcon.png");
+}
+.frontend-image{
+	background-image: url("../data/assets/frontend.png");
+}
+.php-logo{
+	background-image: url("../data/assets/php.png");
+}
+.jquery-logo{
+	background-image: url("../data/assets/jquery.png");
+}
+.ecommerce-image{
+	background-image: url("../data/assets/ecommerce.png");
+}
+.keywords-image{
+	background-image: url("../data/assets/brain-logo.png");
+}
+.vue-logo{
+	background-image: url("../data/assets/vue.png");
+}
+.laravel-logo{
+	background-image: url("../data/assets/laravel.png");
+}
+.crypto-image{
+	background-image: url("../data/assets/btc.png");
+}

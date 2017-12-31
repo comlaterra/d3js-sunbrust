@@ -12,6 +12,7 @@
      "children": [
       {
         "name": "Tech",
+        "description": "<span class='tech-image image'></span>",
         "children": [
           {
             "name": "JS",
@@ -52,6 +53,7 @@
       },
       {
         "name": "Tasks",
+        "description": "<span class='check-image image'></span>",
         "children": [
           {
             "name": "Developer",
@@ -59,14 +61,14 @@
             "description": "<span class='code-logo image'></span>"
           },
           {
-            "name": "Biz",
+            "name": "Team/Tech Lead",
             "colour" : "#74ade0",
-            "description": "<h1>BIZ</h1><p>Product Owner<br>Economy</p>"
+            "description": "<h1 class='top'>Leading</h1><div><ul><li>Help, guide, and motivate team members to perform their best</li><li>Set clear team goals</li><li>Delegate tasks and set internal deadlines</li><li>Monitor, report and help to improve team performance</li><li>Listen to team members’ feedback and resolve any issues or conflicts</li><li>Recognise exceptional performance of team members and reward accomplishments</li></ul><ul><li>Project and development framework(s) implementation</li><li>Choose and/or approve technology stack</li><li>Overall system architecture design</li><li>Quality assurance validation and monitoring</li><li>Make sure projects are aligned with company roadmap</li><li>Requirements generation and/or polishing.</li></ul></div>"
           },
           {
             "name": "Strategy",
             "colour" : "#64a3dd",
-            "description": "<h1>STRATEGY</h1><p>Future<br>Prototyping</p>"
+            "description": "<span class='strategy-image image'></span>"
           }
          ]
       },
@@ -75,14 +77,14 @@
         "description": "<span class='projects-image image'></span>",
         "children": [
           {
-            "name": "Fuwa",
+            "name": "PostNL-Timing-...",
             "colour" : "#5399d9",
-            "description": "<h1>FRONT END</h1><p>Open, multi modal & real time trip planning toolbox<br>With the single goal to enable you to build the best travel information apps & services out there</p>"
+            "description": "<h1 class='top'>Leading to deliver</h1><div><ul><li>Help, guide, and motivate team members to perform their best</li><li>Set clear team goals</li><li>Delegate tasks and set internal deadlines</li><li>Implement tools, connection layers, etc.</li><li>Listen to team members’ feedback and resolve any issues or conflicts</li></ul></div>"
           },
           {
             "name": "PlannerStack",
             "colour" : "#428fd5",
-            "description": "<h1>FRONT END</h1><p>Open, multi modal & real time trip planning toolbox<br>With the single goal to enable you to build the best travel information apps & services out there</p>"
+            "description": "<span class='frontend-image image'></span>"
           },
           {
             "name": "Toogethr",
@@ -109,6 +111,7 @@
      "children": [
       {
         "name": "Tech",
+        "description": "<span class='tech-image image'></span>",
         "children": [
           {
             "name": "JS",
@@ -144,6 +147,7 @@
       },
       {
         "name": "Tasks",
+        "description": "<span class='check-image image'></span>",
         "children": [
           {
             "name": "Develop",
@@ -152,7 +156,7 @@
           },
           {
             "name": "Architect",
-            "description": "<h1>ARCHITECT</h1><p>Design<br>Software engineering</p>",
+            "description": "<h1 class='top'>ARCHITECT</h1><div><ul><li>Design overall Front End architecture</li><li>Select the correct tools</li><li>Implement all the required parts for the delivery</li><li>Follow the company and team preferences to implement the best fitting solution</li></ul></div>",
             "colour": "#955865"
           }
          ]
@@ -180,6 +184,7 @@
      "children": [
       {
         "name": "Tech",
+        "description": "<span class='tech-image image'></span>",
         "children": [
           {
             "name": "JS",
@@ -188,7 +193,8 @@
           },
           {
             "name": "PHP",
-            "colour": "#c15d4d"
+            "colour": "#c15d4d",
+            "description": "<span class='php-logo image'></span>"
           },
           {
             "name": "Wordpress",
@@ -213,6 +219,7 @@
       },
       {
         "name": "Tasks",
+        "description": "<span class='check-image image'></span>",
         "children": [
           {
             "name": "Solve",
@@ -221,7 +228,8 @@
           },
           {
             "name": "Consultancy",
-            "colour": "#e3983e"
+            "colour": "#e3983e",
+            "description": "<span class='solve-image image'></span>"
           },
           {
             "name": "Develop",
@@ -230,7 +238,8 @@
           },
           {
             "name": "Lead",
-            "colour": "#eeac39"
+            "colour": "#eeac39",
+            "description": "<h1 class='top'>Leading</h1><div><ul><li>Help, guide, and motivate team members to perform their best</li><li>Set clear team goals</li><li>Delegate tasks and set internal deadlines</li><li>Monitor, report and help to improve team performance</li><li>Listen to team members’ feedback and resolve any issues or conflicts</li><li>Recognise exceptional performance of team members and reward accomplishments</li></ul><ul><li>Project and development framework(s) implementation</li><li>Choose and/or approve technology stack</li><li>Overall system architecture design</li><li>Quality assurance validation and monitoring</li><li>Make sure projects are aligned with company roadmap</li><li>Requirements generation and/or polishing.</li></ul></div>"
           }
          ]
       },
@@ -239,19 +248,23 @@
         "children": [
           {
             "name": "Prorest",
-            "colour": "#f4b636"
+            "colour": "#f4b636",
+            "description": "<h1 class='top'>Prorest</h1><div><p>Design and implemention of the front-end of an SPA using Sencha</p></div>"
           },
           {
             "name": "Smartbrand",
-            "colour": "#f9c034"
+            "colour": "#f9c034",
+            "description": "<h1 class='top'>Smartbrand</h1><div><p>Implementation of commercial and personal webpages using Wordpress</p></div>"
           },
           {
             "name": "OhayoWeb",
-            "colour": "#ffca31"
+            "colour": "#ffca31",
+            "description": "<h1 class='top'>OhayoWeb</h1><div><p>Implementation of commercial and institutional webpages using Yii</p></div>"
           },
           {
             "name": "Institucio",
-            "colour": "#ffcc3a"
+            "colour": "#ffcc3a",
+            "description": "<h1 class='top'>Insitucio</h1><div><p>Implementation of their commercial and institutional webpage and and management system using Yii</p></div>"
           }
          ]
       }
@@ -267,18 +280,22 @@
      "children": [
       {
         "name": "Tech",
+        "description": "<span class='tech-image image'></span>",
         "children": [
           {
             "name": "jQuery",
-            "colour": "#fecd43"
+            "colour": "#fecd43",
+            "description": "<span class='jquery-logo image'></span>"
           },
           {
             "name": "PHP",
-            "colour": "#fecf4c"
+            "colour": "#fecf4c",
+            "description": "<span class='php-logo image'></span>"
           },
           {
             "name": "eCommerce",
-            "colour": "#fdd155"
+            "colour": "#fdd155",
+            "description": "<span class='ecommerce-image image'></span>"
           },
           {
             "name": "JS",
@@ -289,14 +306,17 @@
       },
       {
         "name": "Keywords",
+        "description": "<span class='keywords-image image'></span>",
         "children": [
           {
-            "name": "Automation",
-            "colour": "#fdd467"
+            "name": "eCommerce",
+            "colour": "#fdd467",
+            "description": "<span class='ecommerce-image image'></span>"
           },
           {
             "name": "Logistics",
-            "colour": "#fcd66f"
+            "colour": "#fcd66f",
+            "description": "<span class='ecommerce-image image'></span>"
           },
           {
             "name": "Development",
@@ -305,7 +325,8 @@
           },
           {
             "name": "Mobile",
-            "colour": "#fbd981"
+            "colour": "#fbd981",
+            "description": "<span class='ecommerce-image image'></span>"
           }
         ]
       }
@@ -316,6 +337,7 @@
      "children": [
       {
         "name": "Tech",
+        "description": "<span class='tech-image image'></span>",
         "children": [
           {
             "name": "Ionic",
@@ -346,67 +368,79 @@
       },
       {
         "name": "Keywords",
+        "description": "<span class='keywords-image image'></span>",
         "children": [
           {
             "name": "Automation",
-            "colour": "#fbe4ad"
+            "colour": "#fbe4ad",
+            "description": "<span class='ecommerce-image image'></span>"
           },
           {
             "name": "Monetization",
-            "colour": "#fbe6b5"
+            "colour": "#fbe6b5",
+            "description": "<span class='ecommerce-image image'></span>"
           },
           {
             "name": "ASO",
-            "colour": "#fce9bd"
+            "colour": "#fce9bd",
+            "description": "<span class='ecommerce-image image'></span>"
           },
           {
             "name": "Mobile",
-            "colour": "#fcecc5"
+            "colour": "#fcecc5",
+            "description": "<span class='ecommerce-image image'></span>"
           }
         ]
       }
       ]
     },
     {
-     "name": "Willy's Way",
+     "name": "Zoltan",
      "children": [
       {
         "name": "Tech",
+        "description": "<span class='tech-image image'></span>",
         "children": [
           {
-            "name": "Ionic",
+            "name": "Laravel",
             "colour": "#fdeece",
-            "description": "<span class='ionic-logo image'></span>"
+            "description": "<span class='laravel-logo image'></span>"
           },
           {
-            "name": "AdMob",
+            "name": "Machine Learning",
             "colour": "#fdf1d6",
-            "description": "<span class='admob-logo image'></span>"
+            "description": "<span class='keywords-image image'></span>"
           },
           {
-            "name": "Javascript",
-            "colour": "#fdf4de"
+            "name": "Vue",
+            "colour": "#fdf4de",
+            "description": "<span class='vue-logo image'></span>"
           }
         ]
       },
       {
         "name": "Keywords",
+        "description": "<span class='keywords-image image'></span>",
         "children": [
           {
-            "name": "Experience",
-            "colour": "#fef7e6"
+            "name": "Cryptocurrency",
+            "colour": "#fef7e6",
+            "description": "<span class='crypto-image image'></span>"
           },
           {
-            "name": "Refferral",
-            "colour": "#fefaee"
+            "name": "Prediction",
+            "colour": "#fefaee",
+            "description": "<span class='keywords-image image'></span>"
           },
           {
             "name": "Smart",
-            "colour": "#fffcf7"
+            "colour": "#fffcf7",
+            "description": "<span class='keywords-image image'></span>"
           },
           {
-            "name": "Conversation",
-            "colour": "#ffffff"
+            "name": "Full Stack",
+            "colour": "#ffffff",
+            "description": "<span class='laravel-logo image'></span>"
           }
         ]
       }
